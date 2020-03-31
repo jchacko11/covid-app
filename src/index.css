@@ -16,6 +16,6 @@ code {
     */
 }
 
-.uk-button-primary{
+.uk-button-primary, .uk-button-secondary{
   border: 0 !important;
 }

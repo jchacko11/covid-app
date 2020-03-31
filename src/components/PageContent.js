@@ -1,5 +1,5 @@
 import React from 'react'
-import 'uikit/dist/css/uikit.css'
+import '../theme.scss'
 import 'uikit/dist/js/uikit.js'
 import 'uikit/dist/js/uikit-icons.js'
 
@@ -35,13 +35,11 @@ class PageContent extends React.Component{
 
     return(
       <div className="uk-container">
-        <h1 className="uk-margin-top">Title</h1>
 
         <div uk-filter="target: .js-filter">
 
-          <form className="uk-search uk-search-large" onSubmit={function(){}}>
-              <span uk-search-icon="true"></span>
-              <input id="search" className="uk-search-input" type="search" placeholder="Search..."
+          <form className="uk-search uk-search-large uk-light" onSubmit={function(){}}>
+              <input id="search" className="uk-search-input uk-margin-top" autocomplete="off" type="search" placeholder="Search..."
                 value={this.state.search}
                 onChange={this.handleSearch}
                 uk-filter-control={searchFilter}
@@ -49,12 +47,10 @@ class PageContent extends React.Component{
               </input>
           </form>
 
-        <div className="uk-grid-small uk-flex-middle uk-grid" uk-grid="">
-
-
+        <div className="uk-grid-small" uk-grid="">
           <div className="uk-width-expand uk-first-column">
             <button uk-filter-control="group:one;filter:[data-tags~='Health']"
-                    className="my-filter-control-one uk-button"
+                    className="my-filter-control-one uk-button uk-button-secondary"
                     uk-toggle="target: .my-filter-control-one">Health
             </button>
             <button uk-filter-control="group:one;filter:"
@@ -62,7 +58,7 @@ class PageContent extends React.Component{
                     hidden uk-toggle="target: .my-filter-control-one">Health
             </button>
             <button uk-filter-control="filter:[data-tags~='Tech'];group:two"
-                    className="my-filter-control-two uk-button"
+                    className="my-filter-control-two uk-button uk-button-secondary"
                     uk-toggle="target: .my-filter-control-two">Tech
             </button>
             <button uk-filter-control="filter:;group:two"
@@ -70,7 +66,7 @@ class PageContent extends React.Component{
                     hidden uk-toggle="target: .my-filter-control-two">Tech
             </button>
             <button uk-filter-control="filter:[data-tags~='Other'];group:three"
-                    className="my-filter-control-three uk-button"
+                    className="my-filter-control-three uk-button uk-button-secondary"
                     uk-toggle="target: .my-filter-control-three">Other
             </button>
             <button uk-filter-control="filter:;group:three"

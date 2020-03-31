@@ -4,7 +4,7 @@ import 'uikit/dist/js/uikit.js'
 
 function Nav(){
   return(
-    <nav className="uk-navbar-container uk-dark uk-background-secondary" uk-navbar="true">
+    <nav className="uk-navbar uk-light uk-background-secondary" uk-navbar="true">
         <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
                 <li className="uk-active"><a href="">Home</a></li>

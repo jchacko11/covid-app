@@ -40,7 +40,7 @@ const CardContainer = observer(class CardContainer extends React.Component {
   }
   render() {
     const {docs, fetching} = this.col;
-    return <ul className="js-filter uk-child-width-1-2 uk-child-width-1-3@m" uk-grid="masonry: true">
+    return <ul className="js-filter uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
       {docs.map((doc) => <Card key={doc.id} doc={doc} />)}
     </ul>;
   }
@@ -52,7 +52,7 @@ const Card = observer(({doc}) => {
   return (
       <li data-text={(title ? title : "") + "  " + (body ? body : "") + "  " + (url ? url : "") + "  " + (tags ? tags.join(" ") : "")} data-tags={tags ? tags.join(" ") : " "}>
       <div>
-        <div className="uk-card uk-card-default uk-padding uk-card-hover">
+        <div className="uk-card uk-card-primary uk-padding uk-card-hover">
             <h3>{title}</h3>
             <p>{body}</p>
 
